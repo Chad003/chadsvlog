@@ -7,6 +7,7 @@
         <?php include "./components/tagline.php" ?>
         <?php include "./components/cards-summary.php" ?>
         <?php include "./components/quick-summary.php" ?>
+        <?php include "./components/github-link.php" ?>
         <?php include "./components/programming-language.php" ?>
         <?php include "./components/front-end-frameworks.php" ?>
         <?php include "./components/page-info.php" ?>
