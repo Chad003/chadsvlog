@@ -8,10 +8,25 @@
 <body>
     <?php include "./components/sidebar.php" ?>
 
-    <main class="main flex-1 p-6 md:ml-[220px] md:mt-0">
+    <main class="flex-1 p-6 md:ml-[220px] md:mt-0 bg-[#f9f8f5] min-h-screen pt-20 md:pt-10">
+        <section class="bg-white p-6 rounded-xl shadow-md mt-10 border border-[#d1bfa3]/50">
+            <h2 class="text-2xl font-semibold mb-4 text-center text-[#727b46]">🧠 Take the ADHD Self-Assessment</h2>
+            <p class="text-center text-gray-700 max-w-2xl mx-auto mb-6">
+                Curious about focus, attention, or impulsivity patterns? Try this short ADHD assessment based on DSM-5
+                criteria.
+                This interactive test will analyze your responses and show a summary at the end.
+            </p>
+
+            <div class="flex justify-center">
+                <a href="./adhd-test.php"
+                    class="px-6 py-3 bg-[#727b46] hover:bg-[#88785f] text-white font-medium rounded-full transition-all duration-200">
+                    Start the Test →
+                </a>
+            </div>
+        </section>
+
         <section class="bg-white p-6 rounded-xl shadow-md mt-10 border border-[#d1bfa3]/50">
             <h2 class="text-2xl font-semibold mb-6 text-center text-[#727b46]">My Projects & Websites</h2>
-
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div
                     class="bg-white rounded-xl shadow-md overflow-hidden border border-[#d1bfa3]/50 hover:shadow-lg transition-shadow duration-300">
@@ -33,8 +48,9 @@
                     </div>
                 </div>
             </div>
-        </main>
-        <?php include "./components/page-info.php" ?>
+        </section>
+    </main>
+    <?php include "./components/page-info.php" ?>
     </div>
 </body>
 

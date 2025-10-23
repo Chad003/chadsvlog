@@ -7,7 +7,7 @@
 
 <body>
     <?php include "./components/sidebar.php" ?>
-    <main class="main flex-1 p-6 md:ml-[220px] md:mt-0">
+    <main class="flex-1 p-6 md:ml-[220px] md:mt-0 bg-[#f9f8f5] min-h-screen pt-20 md:pt-10">
         <div class="bg-white p-6 rounded-xl shadow-md mt-10 border border-[#d1bfa3]/50">
             <section
                 class="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-start gap-8 bg-[#f4f1ec] p-3 md:p-10 rounded-2xl shadow-sm border border-[#d1bfa3]/50 mb-8">
