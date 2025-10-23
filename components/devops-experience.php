@@ -6,8 +6,7 @@
     <p class="text-[#3d3d2f]/90 text-base sm:text-lg max-w-3xl mx-auto mb-10">
       I specialize in deploying modern web applications using reliable hosting platforms and 
       custom server setups. With hands-on experience in <span class="font-medium text-[#88785f]">Nginx</span> configuration, 
-      server optimization, and <span class="font-medium text-[#88785f]">GitLab CI/CD</span> automation, 
-      I ensure efficient, secure, and seamless deployment pipelines.
+      server optimization. I ensure efficient, secure, and seamless deployment pipelines.
     </p>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-center place-items-center">
@@ -16,16 +15,8 @@
         <p class="text-sm font-medium text-[#3d3d2f]">Nginx Configuration</p>
       </div>
       <div class="flex flex-col items-center">
-        <i class="fa-brands fa-gitlab text-4xl text-[#88785f] mb-2"></i>
-        <p class="text-sm font-medium text-[#3d3d2f]">GitLab CI/CD</p>
-      </div>
-      <div class="flex flex-col items-center">
         <i class="fa-solid fa-cloud text-4xl text-[#727b46] mb-2"></i>
         <p class="text-sm font-medium text-[#3d3d2f]">Cloud Hosting</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <i class="fa-solid fa-code-branch text-4xl text-[#88785f] mb-2"></i>
-        <p class="text-sm font-medium text-[#3d3d2f]">Continuous Integration</p>
       </div>
     </div>
   </div>

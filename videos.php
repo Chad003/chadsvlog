@@ -1,9 +1,14 @@
-<?php include "./components/header.php" ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?php include "./components/header.php" ?>
+</head>
 
 <body>
     <?php include "./components/sidebar.php" ?>
 
-    <div class="main flex-1 p-6 md:ml-[220px] md:mt-0">
+    <main class="main flex-1 p-6 md:ml-[220px] md:mt-0">
         <section class="bg-white p-6 rounded-xl shadow-md mt-10 border border-[#d1bfa3]/50">
             <h2 class="text-2xl font-semibold mb-6 text-center text-[#727b46]">🎬 Featured YouTube Videos</h2>
 
@@ -32,7 +37,7 @@
         </section>
 
         <?php include "./components/page-info.php" ?>
-    </div>
+    </main>
 </body>
 
 </html>
