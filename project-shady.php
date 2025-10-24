@@ -14,15 +14,15 @@
                 <div class="relative w-full md:w-1/2">
                     <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 scroll-smooth no-scrollbar">
                         <div class="flex-shrink-0 snap-center w-full aspect-video rounded-xl overflow-hidden">
-                            <img src="./assets/shady-3.jpeg" alt="SHADY Project Image 1"
+                            <img src="./assets/images/shady-3.webp" alt="SHADY Project Image 1"
                                 class="w-full h-full object-cover rounded-xl">
                         </div>
                         <div class="flex-shrink-0 snap-center w-full aspect-video rounded-xl overflow-hidden">
-                            <img src="./assets/shady-2.jpg" alt="SHADY Project Image 2"
+                            <img src="./assets/images/shady-2.webp" alt="SHADY Project Image 2"
                                 class="w-full h-full object-cover rounded-xl">
                         </div>
                         <div class="flex-shrink-0 snap-center w-full aspect-video rounded-xl overflow-hidden">
-                            <img src="./assets/shady-1.png" alt="SHADY Project Image 3"
+                            <img src="./assets/images/shady-1.webp" alt="SHADY Project Image 3"
                                 class="w-full h-full object-cover rounded-xl">
                         </div>
                     </div>

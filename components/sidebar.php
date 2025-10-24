@@ -1,7 +1,7 @@
 <aside
     class="hidden md:flex flex-col items-center bg-[#f4f1ec] text-[#3d3d2f] w-60 py-10 fixed h-screen border-r border-[#d1bfa3]/50 shadow-md">
     <div class="flex flex-col items-center mb-10">
-        <img src="./assets/logo.png" alt="ChadsVlog Logo"
+        <img src="./assets/images/chadsvlog-logo.webp" alt="ChadsVlog Logo"
             class="w-16 h-16 object-contain mb-3 rounded-full shadow-sm border border-[#d1bfa3]/50">
         <h1 class="text-xl font-bold text-[#727b46] tracking-wide">ChadsVlog</h1>
         <p class="text-xs text-[#88785f]">Developer • Creator</p>
@@ -47,7 +47,7 @@
     class="md:hidden fixed top-0 left-0 right-0 bg-[#f4f1ec]/95 backdrop-blur-md text-[#3d3d2f] py-3 px-4 shadow-sm z-50 border-b border-[#d1bfa3]/40">
     <div class="flex items-center justify-between">
         <div class="flex items-center gap-3">
-            <img src="./assets/logo.png" alt="ChadsVlog Logo"
+            <img src="./assets/images/chadsvlog-logo.webp" alt="ChadsVlog Logo"
                 class="w-9 h-9 rounded-full border border-[#d1bfa3]/50 shadow-sm object-contain">
             <div>
                 <h1 class="text-lg font-bold text-[#727b46] leading-tight">ChadsVlog</h1>

@@ -2,7 +2,7 @@
 $frameworks = [
     ['name' => 'React', 'icon' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'],
     ['name' => 'Vue.js', 'icon' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg'],
-    ['name' => 'Tailwind', 'icon' => './assets/tailwind.png'],
+    ['name' => 'Tailwind', 'icon' => './assets/images/tailwind.webp'],
     ['name' => 'Bootstrap', 'icon' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg'],
 ];
 ?>

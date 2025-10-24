@@ -11,7 +11,7 @@
         <div class="bg-white p-6 rounded-xl shadow-md mt-10 border border-[#d1bfa3]/50">
             <section
                 class="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-start gap-8 bg-[#f4f1ec] p-3 md:p-10 rounded-2xl shadow-sm border border-[#d1bfa3]/50 mb-8">
-                <img src="./assets/chad-profile.png" alt="Chad's Profile"
+                <img src="./assets/images/chad-profile.webp" alt="Chad's Profile"
                     class="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover shadow-lg border-4 border-[#d1bfa3]" />
                 <div class="text-center md:text-left">
                     <h1 class="text-3xl md:text-4xl font-bold text-[#727b46]">Richard Mark Jamilla</h1>
