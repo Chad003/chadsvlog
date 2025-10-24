@@ -1,34 +1,38 @@
-<div class="flex overflow-x-auto gap-4 sm:grid sm:grid-cols-2 md:grid-cols-4 no-scrollbar py-2 mt-4">
-    <div class="flex items-center gap-4 bg-[#f4f1ec] rounded-xl shadow-md p-5 flex-shrink-0 w-72 sm:w-auto border border-[#d1bfa3]/50 
-           transition-all duration-300 hover:scale-105 hover:shadow-lg">
-        <i class="fa-solid fa-code text-[#727b46] text-4xl"></i>
-        <div class="text-left">
-            <h3 class="text-[#727b46] text-lg font-semibold">Developer Experience</h3>
-            <p class="text-2xl font-bold text-[#3d3d2f]">3 years</p>
-        </div>
+<?php
+$cards = [
+    ["icon" => "fa-code", "title" => "Developer Experience", "value" => "3 years"],
+    ["icon" => "fa-video", "title" => "YouTube Videos", "value" => "63"],
+    ["icon" => "fa-helicopter", "title" => "Drone Pilot Flight Time", "value" => "14.8 Hours"],
+    ["icon" => "fa-plane", "title" => "Total Flights", "value" => "148"]
+];
+?>
+
+<div class="no-scrollbar py-2 my-2">
+    <div class="flex overflow-x-auto gap-4 sm:hidden no-scrollbar">
+        <?php foreach ($cards as $card): ?>
+            <div
+                class="flex items-center gap-3 bg-[#f4f1ec] rounded-xl shadow-md p-3 flex-shrink-0 w-64 border border-[#d1bfa3]/50 transition-all duration-300  hover:shadow-lg">
+                <i class="fa-solid <?= $card['icon']; ?> text-[#727b46] text-2xl"></i>
+                <div class="text-left truncate">
+                    <h3 class="text-[#727b46] text-base font-semibold leading-snug truncate"><?= $card['title']; ?></h3>
+                    <p class="text-xl font-bold text-[#3d3d2f]"><?= $card['value']; ?></p>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
-    <div class="flex items-center gap-4 bg-[#f4f1ec] rounded-xl shadow-md p-5 flex-shrink-0 w-72 sm:w-auto border border-[#d1bfa3]/50 
-           transition-all duration-300 hover:scale-105 hover:shadow-lg">
-        <i class="fa-brands fa-youtube text-[#88785f] text-4xl"></i>
-        <div class="text-left">
-            <h3 class="text-[#727b46] text-lg font-semibold">YouTube Videos</h3>
-            <p class="text-2xl font-bold text-[#3d3d2f]">63</p>
-        </div>
+    <div class="hidden sm:grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <?php foreach ($cards as $card): ?>
+            <div
+                class="flex items-center gap-3 bg-[#f4f1ec] rounded-xl shadow-md p-4 md:p-4 flex-shrink-0 border border-[#d1bfa3]/50 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid <?= $card['icon']; ?> text-[#727b46] text-2xl md:text-3xl"></i>
+                <div class="text-left min-w-0">
+                    <h3 class="text-[#727b46] text-base md:text-lg font-semibold leading-snug truncate">
+                        <?= $card['title']; ?>
+                    </h3>
+                    <p class="text-lg md:text-2xl font-bold text-[#3d3d2f]"><?= $card['value']; ?></p>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
-    <div class="flex items-center gap-4 bg-[#f4f1ec] rounded-xl shadow-md p-5 flex-shrink-0 w-72 sm:w-auto border border-[#d1bfa3]/50 
-           transition-all duration-300 hover:scale-105 hover:shadow-lg">
-        <i class="fa-solid fa-helicopter text-[#727b46] text-4xl"></i>
-        <div class="text-left">
-            <h3 class="text-[#727b46] text-lg font-semibold">Drone Pilot Flight Time</h3>
-            <p class="text-2xl font-bold text-[#3d3d2f]">14.8 Hours</p>
-        </div>
-    </div>
-    <div class="flex items-center gap-4 bg-[#f4f1ec] rounded-xl shadow-md p-5 flex-shrink-0 w-72 sm:w-auto border border-[#d1bfa3]/50 
-           transition-all duration-300 hover:scale-105 hover:shadow-lg">
-        <i class="fa-solid fa-plane-departure text-[#88785f] text-4xl"></i>
-        <div class="text-left">
-            <h3 class="text-[#727b46] text-lg font-semibold">Total Flights</h3>
-            <p class="text-2xl font-bold text-[#3d3d2f]">148</p>
-        </div>
-    </div>
+
 </div>

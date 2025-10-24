@@ -1,4 +1,4 @@
-<section class="bg-gradient-to-b from-[#f9f7f3] to-white py-14 md:py-20 border-t border-[#d1bfa3]/40">
+<section class="bg-gradient-to-b from-[#f9f7f3] to-white py-7 md:py-20 border-t border-[#d1bfa3]/40">
   <div class="max-w-4xl mx-auto px-6 text-center">
     <h2 class="text-2xl sm:text-3xl font-semibold text-[#727b46] mb-4">
       Explore the Code

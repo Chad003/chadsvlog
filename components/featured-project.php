@@ -1,48 +1,55 @@
-<section class="bg-white rounded-xl shadow-md border border-[#d1bfa3]/50 mt-8 p-6 md:p-10">
-  <h2 class="text-2xl md:text-3xl font-semibold text-center text-[#727b46] mb-6">
-    Featured Project
-  </h2>
-
-  <div class="flex flex-col md:flex-row items-center gap-6">
-    <div class="relative w-full md:w-1/2">
-      <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 scroll-smooth no-scrollbar">
-        <div class="flex-shrink-0 snap-center w-full aspect-video rounded-xl overflow-hidden">
-          <img src="./assets/shady-3.jpeg" alt="SHADY Project Image 1" class="w-full h-full object-cover rounded-xl">
+<?php
+$projects = [
+  [
+    'title' => 'SHADY: Smart Helmet',
+    'description' => 'A smart helmet with voice recognition and sensor automation for safer, more efficient rides.',
+    'link' => './project-shady.php',
+    'button' => 'View Full Project'
+  ],
+  [
+    'title' => 'ADHD Test',
+    'description' => 'An interactive self-assessment tool inspired by DSM-5 ADHD diagnostic criteria.',
+    'link' => './adhd-test.php',
+    'button' => 'Take Test'
+  ]
+];
+?>
+<div class="-mx-6 sm:mx-0">
+  <section class="bg-[#f4f1ec] py-5 px-4 sm:px-8 rounded-xl mt-2">
+    <h2 class="text-2xl font-semibold text-[#727b46] mb-6 text-center">Featured Projects</h2>
+    <div class="flex overflow-x-auto gap-4 sm:hidden no-scrollbar pb-2">
+      <?php foreach ($projects as $project): ?>
+        <div
+          class="flex flex-col justify-between bg-white rounded-xl shadow-md p-5 border border-[#d1bfa3]/40 hover:shadow-lg transition-all duration-300 flex-shrink-0 w-72">
+          <div>
+            <h3 class="text-lg font-semibold text-[#727b46] mb-2"><?= htmlspecialchars($project['title']) ?></h3>
+            <p class="text-sm text-gray-700 mb-6"><?= htmlspecialchars($project['description']) ?></p>
+          </div>
+          <div class="mt-auto pt-3">
+            <a href="<?= htmlspecialchars($project['link']) ?>"
+              class="inline-block px-4 py-2 bg-[#727b46] text-white rounded-full hover:bg-[#88785f] transition-all duration-200">
+              <?= htmlspecialchars($project['button']) ?>
+            </a>
+          </div>
         </div>
-        <div class="flex-shrink-0 snap-center w-full aspect-video rounded-xl overflow-hidden">
-          <img src="./assets/shady-2.jpg" alt="SHADY Project Image 2" class="w-full h-full object-cover rounded-xl">
-        </div>
-        <div class="flex-shrink-0 snap-center w-full aspect-video rounded-xl overflow-hidden">
-          <img src="./assets/shady-1.png" alt="SHADY Project Image 3" class="w-full h-full object-cover rounded-xl">
-        </div>
-      </div>
-      <div
-        class="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-white via-white/10 to-transparent rounded-l-xl">
-      </div>
-      <div
-        class="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-white via-white/10 to-transparent rounded-r-xl">
-      </div>
+      <?php endforeach; ?>
     </div>
-    <div class="w-full md:w-1/2 text-center md:text-left">
-      <h3 class="text-xl font-semibold text-[#88785f] mb-3">
-        SHADY — Smart Helmet Autonomous Drivers Yeoman
-      </h3>
-      <p class="text-[#3d3d2f] mb-4 leading-relaxed">
-        SHADY is an innovative smart helmet integrating <span class="font-medium text-[#727b46]">voice
-          recognition</span>
-        and sensor technology for a safer, more intelligent riding experience.
-      </p>
-      <p class="text-[#3d3d2f] mb-4 leading-relaxed">
-        The system includes an <span class="font-medium text-[#727b46]">Android app</span> and a
-        microcontroller-based device that communicate in real time — combining
-        <span class="font-medium text-[#88785f]">IoT, embedded systems,</span> and
-        <span class="font-medium text-[#88785f]">software innovation</span>.
-      </p>
-
-      <a href="https://youtu.be/QuFz993d-lo?si=NOyPhuwodGvlXrBr" target="_blank"
-        class="inline-block px-5 py-2 bg-[#727b46] text-white rounded-full font-medium hover:bg-[#88785f] transition-colors duration-300">
-        🎥 Watch Demo
-      </a>
+    <div class="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <?php foreach ($projects as $project): ?>
+        <div
+          class="flex flex-col justify-between bg-white rounded-xl shadow-md p-6 border border-[#d1bfa3]/40 hover:shadow-lg transition-all duration-300">
+          <div>
+            <h3 class="text-lg font-semibold text-[#727b46] mb-2"><?= htmlspecialchars($project['title']) ?></h3>
+            <p class="text-sm text-gray-700 mb-6"><?= htmlspecialchars($project['description']) ?></p>
+          </div>
+          <div class="mt-auto pt-3">
+            <a href="<?= htmlspecialchars($project['link']) ?>"
+              class="inline-block px-4 py-2 bg-[#727b46] text-white rounded-full hover:bg-[#88785f] transition-all duration-200">
+              <?= htmlspecialchars($project['button']) ?>
+            </a>
+          </div>
+        </div>
+      <?php endforeach; ?>
     </div>
-  </div>
-</section>
+  </section>
+</div>
