@@ -13,19 +13,19 @@
             <span>Home</span>
         </a>
 
-        <a href="./videos.php"
+        <a href="./videos"
             class="flex items-center w-4/5 gap-3 px-4 py-2 rounded-lg hover:bg-[#d1bfa3]/20 hover:text-[#727b46] transition-all duration-200 group">
             <i class="fa-solid fa-video text-[#88785f] group-hover:text-[#727b46]"></i>
             <span>Videos</span>
         </a>
 
-        <a href="./photos.php"
+        <a href="./photos"
             class="flex items-center w-4/5 gap-3 px-4 py-2 rounded-lg hover:bg-[#d1bfa3]/20 hover:text-[#727b46] transition-all duration-200 group">
             <i class="fa-solid fa-camera text-[#88785f] group-hover:text-[#727b46]"></i>
             <span>Photos</span>
         </a>
 
-        <a href="./about.php"
+        <a href="./about"
             class="flex items-center w-4/5 gap-3 px-4 py-2 rounded-lg hover:bg-[#d1bfa3]/20 hover:text-[#727b46] transition-all duration-200 group">
             <i class="fa-solid fa-user text-[#88785f] group-hover:text-[#727b46]"></i>
             <span>About</span>
@@ -74,7 +74,7 @@
         <span class="text-[11px] mt-1 font-medium">Home</span>
     </a>
 
-    <a href="./videos.php"
+    <a href="./videos"
         class="flex flex-col items-center text-[#88785f] hover:text-[#727b46] transition-all duration-200 active:text-[#727b46]">
         <div class="p-2 rounded-full hover:bg-[#727b46]/10 transition-colors duration-200">
             <i class="fa-solid fa-video text-lg"></i>
@@ -82,7 +82,7 @@
         <span class="text-[11px] mt-1 font-medium">Videos</span>
     </a>
 
-    <a href="./photos.php"
+    <a href="./photos"
         class="flex flex-col items-center text-[#88785f] hover:text-[#727b46] transition-all duration-200 active:text-[#727b46]">
         <div class="p-2 rounded-full hover:bg-[#727b46]/10 transition-colors duration-200">
             <i class="fa-solid fa-image text-lg"></i>
@@ -90,7 +90,7 @@
         <span class="text-[11px] mt-1 font-medium">Photos</span>
     </a>
 
-    <a href="./about.php"
+    <a href="./about"
         class="flex flex-col items-center text-[#88785f] hover:text-[#727b46] transition-all duration-200 active:text-[#727b46]">
         <div class="p-2 rounded-full hover:bg-[#727b46]/10 transition-colors duration-200">
             <i class="fa-solid fa-user text-lg"></i>

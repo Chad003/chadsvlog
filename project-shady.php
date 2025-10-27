@@ -51,7 +51,11 @@
 
                     <a href="https://youtu.be/QuFz993d-lo?si=NOyPhuwodGvlXrBr" target="_blank"
                         class="inline-block px-5 py-2 bg-[#727b46] text-white rounded-full font-medium hover:bg-[#88785f] transition-colors duration-300">
-                        🎥 Watch Demo
+                        Watch Demo
+                    </a>
+                    <a href="./sub-projects/shady-dashboard.php" target="_blank"
+                        class="inline-block px-5 py-2 bg-[#727b46] text-white rounded-full font-medium hover:bg-[#88785f] transition-colors duration-300">
+                        Visit Demo Site
                     </a>
                 </div>
             </div>
