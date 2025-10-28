@@ -3,15 +3,15 @@ $projects = [
   [
     'title' => 'SHADY: Smart Helmet',
     'description' => 'A smart helmet with voice recognition and sensor automation for safer, more efficient rides.',
-    'link' => './project-shady.php',
+    'link' => './project-shady',
     'button' => 'View Full Project'
   ],
   [
-    'title' => 'ADHD Test',
-    'description' => 'An interactive self-assessment tool inspired by DSM-5 ADHD diagnostic criteria.',
-    'link' => './adhd-test.php',
-    'button' => 'Take Test'
-  ]
+    'title' => 'WorkerHunt',
+    'description' => 'WorkerHunt is a platform that connects Filipinos with trusted local workers. WorkerHunt makes it easy to find and hire reliable people nearby—quickly, conveniently, and with confidence.',
+    'link' => './project-workerhunt',
+    'button' => 'View Demo'
+  ],
 ];
 ?>
 <div class="-mx-6 sm:mx-0">
