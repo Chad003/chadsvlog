@@ -10,7 +10,7 @@
 
     <main class="flex-1 p-6 md:ml-[220px] md:mt-0 bg-[#f9f8f5] min-h-screen pt-20 md:pt-10">
         <section class="bg-white p-6 rounded-xl shadow-md mt-10 border border-[#d1bfa3]/50">
-            <h2 class="text-2xl font-semibold mb-6 text-center text-[#727b46]">📸 Drone Photography Gallery</h2>
+            <h2 class="text-2xl font-semibold mb-6 text-center text-[#727b46]">Personal Gallery</h2>
 
             <div id="gallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 <img src="./assets/images/drone-1.webp" alt="Drone shot 1"

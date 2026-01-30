@@ -1,7 +1,7 @@
 <div class="-mx-6 sm:mx-0">
     <section class="flex flex-col items-center justify-center text-center px-4 py-4 pt-12 md:py-24 bg-gradient-to-b from-[#727b46] to-[#88785f] text-white w-full">
         <p class="uppercase tracking-widest text-xs sm:text-sm text-yellow-200 mb-2">
-            Welcome to <span class="font-semibold">ChadsVlog</span>
+             <!-- <span class="font-semibold">ChadsVlog</span> Official Website -->
         </p>
         <h1 class="text-2xl sm:text-4xl font-extrabold mb-3 leading-tight">
             A <span class="text-yellow-100">Traveler</span>, 

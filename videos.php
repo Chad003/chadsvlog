@@ -10,7 +10,7 @@
 
     <main class="flex-1 p-6 md:ml-[220px] md:mt-0 bg-[#f9f8f5] min-h-screen pt-20 md:pt-10">
         <section class="bg-white p-6 rounded-xl shadow-md mt-10 border border-[#d1bfa3]/50">
-            <h2 class="text-2xl font-semibold mb-6 text-center text-[#727b46]">🎬 Featured YouTube Videos</h2>
+            <h2 class="text-2xl font-semibold mb-6 text-center text-[#727b46]">Featured YouTube Videos</h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div

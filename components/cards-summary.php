@@ -1,9 +1,11 @@
 <?php
+$LIFE_PERCENT = round(( (new DateTime("2000-06-03"))->diff(new DateTime())->days / (new DateTime("2000-06-03"))->diff(new DateTime("2080-06-03"))->days ) * 100, 2) . "%";
+$DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . " years | " . (new DateTime("2022-09-13"))->diff(new DateTime())->d . " days";
 $cards = [
-    ["icon" => "fa-code", "title" => "Developer Experience", "value" => "3 years"],
-    ["icon" => "fa-video", "title" => "YouTube Videos", "value" => "63"],
-    ["icon" => "fa-helicopter", "title" => "Drone Pilot Flight Time", "value" => "14.8 Hours"],
-    ["icon" => "fa-plane", "title" => "Total Flights", "value" => "148"]
+    ["icon" => "fa-code", "title" => "Work Experience", "value" => $DEVELOPER_EXPERINCE],
+    ["icon" => "fa-heart", "title" => "Life Progress / 80 years", "value" => $LIFE_PERCENT],
+    ["icon" => "fa-coffee", "title" => "Max Coffee/day", "value" => "3"],
+    ["icon" => "fa-briefcase", "title" => "Working Hours", "value" => "8 Hours"],
 ];
 ?>
 
