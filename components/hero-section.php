@@ -16,9 +16,9 @@
                 class="px-5 py-2 bg-white/20 hover:bg-white/30 text-white font-medium rounded-full transition-all duration-200 backdrop-blur-sm flex items-center gap-2">
                 <i class="fa-brands fa-youtube text-red-400"></i> Watch
             </a>
-            <a href="./websites.php"
+             <a href="https://www.fiverr.com/s/38Wy7ja"
                 class="px-5 py-2 border border-white/40 hover:border-white text-white/90 hover:text-white rounded-full transition-all duration-200 flex items-center gap-2">
-                <i class="fa-solid fa-globe text-yellow-200"></i> Websites
+                <i class="fa-solid fa-briefcase text-yellow-200"></i> Hire me on Fiver
             </a>
         </div>
     </section>
