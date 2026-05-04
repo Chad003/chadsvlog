@@ -31,6 +31,12 @@
             <span>About</span>
         </a>
 
+         <a href="./community"
+            class="flex items-center w-4/5 gap-3 px-4 py-2 rounded-lg hover:bg-[#d1bfa3]/20 hover:text-[#727b46] transition-all duration-200 group">
+            <i class="fa-solid fa-users text-[#88785f] group-hover:text-[#727b46]"></i>
+            <span>Community</span>
+        </a>
+
         <a href="https://github.com/Chad003/chadsvlog" target="_blank"
             class="flex items-center w-4/5 gap-3 px-4 py-2 rounded-lg hover:bg-[#d1bfa3]/20 hover:text-[#727b46] transition-all duration-200 group">
             <i class="fa-brands fa-github text-[#88785f] group-hover:text-[#727b46]"></i>
@@ -82,12 +88,12 @@
         <span class="text-[11px] mt-1 font-medium">Videos</span>
     </a>
 
-    <a href="./photos"
+    <a href="./community"
         class="flex flex-col items-center text-[#88785f] hover:text-[#727b46] transition-all duration-200 active:text-[#727b46]">
         <div class="p-2 rounded-full hover:bg-[#727b46]/10 transition-colors duration-200">
-            <i class="fa-solid fa-image text-lg"></i>
+            <i class="fa-solid fa-users text-lg"></i>
         </div>
-        <span class="text-[11px] mt-1 font-medium">Photos</span>
+        <span class="text-[11px] mt-1 font-medium">Community</span>
     </a>
 
     <a href="./about"
