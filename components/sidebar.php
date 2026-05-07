@@ -4,7 +4,7 @@
         <img src="./assets/images/chadsvlog-logo.webp" alt="ChadsVlog Logo"
             class="w-16 h-16 object-contain mb-3 rounded-full shadow-sm border border-[#d1bfa3]/50">
         <h1 class="text-xl font-bold text-[#727b46] tracking-wide">ChadsVlog</h1>
-        <p class="text-xs text-[#88785f]">Developer • Creator</p>
+        <p class="text-xs text-[#88785f]">Web Developer • Content Creator</p>
     </div>
     <nav class="w-full flex flex-col items-center space-y-2 text-base font-medium">
         <a href="./"
@@ -19,22 +19,16 @@
             <span>Videos</span>
         </a>
 
-        <a href="./photos"
-            class="flex items-center w-4/5 gap-3 px-4 py-2 rounded-lg hover:bg-[#d1bfa3]/20 hover:text-[#727b46] transition-all duration-200 group">
-            <i class="fa-solid fa-camera text-[#88785f] group-hover:text-[#727b46]"></i>
-            <span>Photos</span>
-        </a>
-
         <a href="./about"
             class="flex items-center w-4/5 gap-3 px-4 py-2 rounded-lg hover:bg-[#d1bfa3]/20 hover:text-[#727b46] transition-all duration-200 group">
             <i class="fa-solid fa-user text-[#88785f] group-hover:text-[#727b46]"></i>
             <span>About</span>
         </a>
 
-         <a href="./community"
+         <a href="./content"
             class="flex items-center w-4/5 gap-3 px-4 py-2 rounded-lg hover:bg-[#d1bfa3]/20 hover:text-[#727b46] transition-all duration-200 group">
-            <i class="fa-solid fa-users text-[#88785f] group-hover:text-[#727b46]"></i>
-            <span>Community</span>
+            <i class="fa-solid fa-paperclip text-[#88785f] group-hover:text-[#727b46]"></i>
+            <span>Content</span>
         </a>
 
         <a href="https://github.com/Chad003/chadsvlog" target="_blank"
@@ -57,7 +51,7 @@
                 class="w-9 h-9 rounded-full border border-[#d1bfa3]/50 shadow-sm object-contain">
             <div>
                 <h1 class="text-lg font-bold text-[#727b46] leading-tight">ChadsVlog</h1>
-                <p class="text-xs text-[#88785f]">Developer • Creator</p>
+                <p class="text-xs text-[#88785f]">Web Developer • Content Creator</p>
             </div>
         </div>
         <div class="flex items-center gap-4 text-[#88785f]">
@@ -88,12 +82,12 @@
         <span class="text-[11px] mt-1 font-medium">Videos</span>
     </a>
 
-    <a href="./community"
+    <a href="./content"
         class="flex flex-col items-center text-[#88785f] hover:text-[#727b46] transition-all duration-200 active:text-[#727b46]">
         <div class="p-2 rounded-full hover:bg-[#727b46]/10 transition-colors duration-200">
-            <i class="fa-solid fa-users text-lg"></i>
+            <i class="fa-solid fa-paperclip text-lg"></i>
         </div>
-        <span class="text-[11px] mt-1 font-medium">Community</span>
+        <span class="text-[11px] mt-1 font-medium">Content</span>
     </a>
 
     <a href="./about"
