@@ -25,9 +25,9 @@
             <span>About</span>
         </a>
 
-         <a href="./content"
+        <a href="./content"
             class="flex items-center w-4/5 gap-3 px-4 py-2 rounded-lg hover:bg-[#d1bfa3]/20 hover:text-[#727b46] transition-all duration-200 group">
-            <i class="fa-solid fa-paperclip text-[#88785f] group-hover:text-[#727b46]"></i>
+            <i class="fa-solid fa-newspaper text-[#88785f] group-hover:text-[#727b46]"></i>
             <span>Content</span>
         </a>
 
@@ -85,7 +85,7 @@
     <a href="./content"
         class="flex flex-col items-center text-[#88785f] hover:text-[#727b46] transition-all duration-200 active:text-[#727b46]">
         <div class="p-2 rounded-full hover:bg-[#727b46]/10 transition-colors duration-200">
-            <i class="fa-solid fa-paperclip text-lg"></i>
+            <i class="fa-solid fa-newspaper text-[#88785f] group-hover:text-[#727b46]"></i>
         </div>
         <span class="text-[11px] mt-1 font-medium">Content</span>
     </a>
