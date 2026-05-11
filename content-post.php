@@ -5,7 +5,7 @@ include_once "http_request_config.php";
 $post_id = $_GET['id'] ?? '';
 
 // Fetch all posts and find the one with matching ID
-$apiResponse = HTTP_REQUEST("/api/content/get-post-by-id.php?id=$post_id");
+$apiResponse = HTTP_REQUEST("/api/content/get-post?id=$post_id");
 $posts = $apiResponse['data'];
 ?>
 
@@ -25,7 +25,7 @@ $posts = $apiResponse['data'];
         <div class="max-w-3xl mx-auto">
 
             <!-- Back Button -->
-            <a href="blog.php" class="inline-flex items-center text-[#727b46] hover:underline mb-6">
+            <a href="./content" class="inline-flex items-center text-[#727b46] hover:underline mb-6">
                 ← Back to Content Hub
             </a>
 
@@ -48,9 +48,9 @@ $posts = $apiResponse['data'];
                     <span>By User #<?= htmlspecialchars($posts['created_by'] ?? '1') ?></span>
                 </div>
 
-                <?php if (!empty($posts['hero_image'])): ?>
+                <?php if (!empty($posts['hero_image_source'])): ?>
                     <div class="mb-4 overflow-hidden rounded-lg">
-                        <img src="<?= $posts['hero_image'] ?>"
+                        <img src="<?= $posts['hero_image_source'] ?>"
                             alt="<?= htmlspecialchars($post['title'] ?? 'Blog Image') ?>"
                             class="w-full h-52 object-cover hover:scale-105 transition-transform duration-300">
                     </div>

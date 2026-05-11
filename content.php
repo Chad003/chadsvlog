@@ -1,7 +1,7 @@
 <?php
 include_once "http_request_config.php";
 
-$threads = HTTP_REQUEST("/api/content/get-posts.php")['data'];
+$threads = HTTP_REQUEST("/api/content/get-posts-list")['data'];
 ?>
 
 <!DOCTYPE html>
@@ -35,9 +35,9 @@ $threads = HTTP_REQUEST("/api/content/get-posts.php")['data'];
                     <div class="mb-12 bg-[#f9f8f5] p-6 rounded-2xl border border-[#d1bfa3]/50">
                         <span
                             class="inline-block bg-[#727b46] text-white text-xs px-3 py-1 rounded-full mb-3">Featured</span>
-                        <?php if (!empty($featured['hero_image'])): ?>
+                        <?php if (!empty($featured['hero_image_source'])): ?>
                             <div class="mb-4 overflow-hidden rounded-lg">
-                                <img src="<?= $featured['hero_image'] ?>" alt="<?= htmlspecialchars($post['title'] ?? 'Blog Image') ?>"
+                                <img src="<?= $featured['hero_image_source'] ?>" alt="<?= htmlspecialchars($post['title'] ?? 'Blog Image') ?>"
                                     class="w-full h-52 object-cover hover:scale-105 transition-transform duration-300">
                             </div>
                         <?php endif; ?>
@@ -74,9 +74,9 @@ $threads = HTTP_REQUEST("/api/content/get-posts.php")['data'];
                                 </h3>
 
                                 <!-- Hero Image (Base64) -->
-                                <?php if (!empty($post['hero_image'])): ?>
+                                <?php if (!empty($post['hero_image_source'])): ?>
                                     <div class="mb-4 overflow-hidden rounded-lg">
-                                        <img src="<?= $post['hero_image'] ?>"
+                                        <img src="<?= $post['hero_image_source'] ?>"
                                             alt="<?= htmlspecialchars($post['title'] ?? 'Blog Image') ?>"
                                             class="w-full h-52 object-cover hover:scale-105 transition-transform duration-300">
                                     </div>
