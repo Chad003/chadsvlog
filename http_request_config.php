@@ -25,7 +25,7 @@ function HTTP_REQUEST($endpoint, $body = null, $method = 'GET')
     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
     if ($response === false || $httpCode !== 200) {
-        die("API Connection Failed - HTTP $httpCode | $endpoint");
+        error_log("API Connection Failed - HTTP $httpCode | $endpoint");
 
         return [
             'success' => false,
