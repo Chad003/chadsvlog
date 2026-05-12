@@ -48,14 +48,6 @@ $posts = $apiResponse['data'];
                     <span>By User #<?= htmlspecialchars($posts['created_by'] ?? '1') ?></span>
                 </div>
 
-                <?php if (!empty($posts['hero_image_source'])): ?>
-                    <div class="mb-4 overflow-hidden rounded-lg">
-                        <img src="<?= $posts['hero_image_source'] ?>"
-                            alt="<?= htmlspecialchars($post['title'] ?? 'Blog Image') ?>"
-                            class="w-full h-52 object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                <?php endif; ?>
-
                 <!-- Content -->
                 <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
                     <?= nl2br(htmlspecialchars($posts['message'] ?? '')) ?>

@@ -35,12 +35,6 @@ $threads = HTTP_REQUEST("/api/content/get-posts-list")['data'];
                     <div class="mb-12 bg-[#f9f8f5] p-6 rounded-2xl border border-[#d1bfa3]/50">
                         <span
                             class="inline-block bg-[#727b46] text-white text-xs px-3 py-1 rounded-full mb-3">Featured</span>
-                        <?php if (!empty($featured['hero_image_source'])): ?>
-                            <div class="mb-4 overflow-hidden rounded-lg">
-                                <img src="<?= $featured['hero_image_source'] ?>" alt="<?= htmlspecialchars($post['title'] ?? 'Blog Image') ?>"
-                                    class="w-full h-52 object-cover hover:scale-105 transition-transform duration-300">
-                            </div>
-                        <?php endif; ?>
                         <h2 class="text-2xl font-semibold mb-3">
                             <?= htmlspecialchars($featured['title']) ?>
                         </h2>
@@ -72,15 +66,6 @@ $threads = HTTP_REQUEST("/api/content/get-posts-list")['data'];
                                 <h3 class="text-xl font-semibold text-[#4a4a4a] mb-3 line-clamp-2">
                                     <?= htmlspecialchars($post['title'] ?? 'Untitled Article') ?>
                                 </h3>
-
-                                <!-- Hero Image (Base64) -->
-                                <?php if (!empty($post['hero_image_source'])): ?>
-                                    <div class="mb-4 overflow-hidden rounded-lg">
-                                        <img src="<?= $post['hero_image_source'] ?>"
-                                            alt="<?= htmlspecialchars($post['title'] ?? 'Blog Image') ?>"
-                                            class="w-full h-52 object-cover hover:scale-105 transition-transform duration-300">
-                                    </div>
-                                <?php endif; ?>
 
                                 <div class="text-gray-600 text-[15px] mb-4 leading-relaxed line-clamp-4">
                                     <?= nl2br(htmlspecialchars(substr($post['message'] ?? '', 0, 220))) ?>...
