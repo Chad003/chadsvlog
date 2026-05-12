@@ -1,7 +1,7 @@
 <?php
 function HTTP_REQUEST($endpoint, $body = null, $method = 'GET')
 {
-    $url = "https://api.chadsvlog.site" . $endpoint;
+    $url = "http://api.chadsvlog.site" . $endpoint;
 
     $ch = curl_init($url);
 
