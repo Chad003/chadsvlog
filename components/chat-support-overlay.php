@@ -16,8 +16,7 @@
             </button>
         </div>
         <div class="flex-1 relative bg-[#FAF2DD]">
-            <iframe src="https://tawk.to/chat/69c648bd35e8d61c3a87642f/1jkn8o8vc" class="absolute inset-0 w-full h-full"
-                frameborder="0" allow="none"></iframe>
+           
         </div>
     </div>
 
@@ -27,10 +26,28 @@
     const openBtn = document.getElementById('chatOpenBtn');
     const closeBtn = document.getElementById('chatCloseBtn');
     const chatBox = document.getElementById('chatBox');
+    const chatContainer = document.getElementById('chatContainer');
+
+    let iframeCreated = false;
+
+    function createIframe() {
+        const iframe = document.createElement('iframe');
+        iframe.src = "https://tawk.to/chat/69c648bd35e8d61c3a87642f/1jkn8o8vc";
+        iframe.className = "absolute inset-0 w-full h-full";
+        iframe.frameBorder = "0";
+        iframe.setAttribute("allow", "none");
+
+        chatContainer.appendChild(iframe);
+        iframeCreated = true;
+    }
 
     openBtn.addEventListener('click', () => {
         chatBox.classList.remove('hidden');
         openBtn.classList.add('hidden');
+
+        if (!iframeCreated) {
+            createIframe();
+        }
     });
 
     closeBtn.addEventListener('click', () => {

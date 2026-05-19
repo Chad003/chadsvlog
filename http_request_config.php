@@ -30,7 +30,7 @@ function HTTP_REQUEST($endpoint, $body = null, $method = 'GET')
         return [
             'success' => false,
             'data' => [],
-            'message' => "Unable to connect to server: $url"
+            'message' => "Unable to connect to server"
         ];
     }
 

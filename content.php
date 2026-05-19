@@ -1,95 +1,144 @@
 <?php
 include_once "http_request_config.php";
 
-$threads = HTTP_REQUEST("/api/content/get-posts-list")['data'];
+$data = HTTP_REQUEST("/api/content/get-posts-list");
+$threads = $data['data'] ?? [];
+$featured = $threads[0] ?? null;
+$posts = array_slice($threads, 1);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include "./components/header.php" ?>
-    <meta name="description"
-        content="Explore the latest articles, guides, tutorials, and insights from ChadsVlog. Your go-to resource hub for quality content.">
+    <?php include "./components/header.php"; ?>
+    <meta name="description" content="Articles, insights, and development notes.">
+    <title>Writing</title>
 </head>
 
-<body>
-    <?php include "./components/sidebar.php" ?>
+<body class="bg-[#f6f5f2] text-gray-900 antialiased">
 
-    <main class="flex-1 p-2 md:ml-[220px] md:mt-0 bg-[#f9f8f5] min-h-screen pt-10 md:pt-10">
-        <section class="bg-white p-6 rounded-xl shadow-md mt-10 border border-[#d1bfa3]/50">
+    <?php include "./components/sidebar.php"; ?>
 
-            <!-- Page Header -->
-            <div class="text-center mb-10">
-                <h1 class="text-4xl font-bold text-[#727b46] mb-3">Content</h1>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Discover insightful articles, guides, tutorials, and stories from my experience as a web developer
-                    and content creator.
+    <main class="flex-1 md:ml-[220px] min-h-screen pt-24 md:pt-12">
+
+        <section class="max-w-5xl mx-auto px-6">
+
+            <header class="mb-16 text-center">
+                <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-[#727b46]">
+                    Writing from my journey
+                </h1>
+
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    Thoughts, experiments, and lessons from building things on the web.
                 </p>
-            </div>
+            </header>
 
-            <div class="max-w-5xl mx-auto">
+            <?php if ($featured): ?>
+                <section class="mb-16">
 
-                <?php if (!empty($threads)): ?>
-                    <?php $featured = $threads[0];?>
-                    <div class="mb-12 bg-[#f9f8f5] p-6 rounded-2xl border border-[#d1bfa3]/50">
-                        <span
-                            class="inline-block bg-[#727b46] text-white text-xs px-3 py-1 rounded-full mb-3">Featured</span>
-                        <h2 class="text-2xl font-semibold mb-3">
-                            <?= htmlspecialchars($featured['title']) ?>
-                        </h2>
-                        <div class="text-gray-600 mb-4 text-[15px] leading-relaxed">
-                            <?= nl2br(htmlspecialchars(substr($featured['message'] ?? '', 0, 280))) ?>...
-                        </div>
-                        <a href="content-post?id=<?= $featured['id'] ?? '' ?>"
-                            class="text-[#727b46] font-medium hover:underline">
-                            Read Full Article →
-                        </a>
-                    </div>
-                <?php endif; ?>
+                    <a href="content-post?id=<?= urlencode($featured['id'] ?? '') ?>" class="block group">
 
-                <!-- Content Grid -->
-                <h2 class="text-2xl font-semibold mb-6 text-[#4a4a4a]">Latest Articles</h2>
+                        <div
+                            class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-md transition">
 
-                <div class="grid md:grid-cols-2 gap-6">
-                    <?php if (empty($threads)): ?>
-                        <div class="col-span-2 text-center py-12 text-gray-500">
-                            No content available at the moment.
-                        </div>
-                    <?php else: ?>
-                        <?php foreach ($threads as $index => $post): ?>
-                            <?php if ($index === 0)
-                                continue; // Skip featured post ?>
-
-                            <div
-                                class="bg-white p-5 rounded-xl shadow-sm border border-[#d1bfa3]/30 hover:shadow-md transition-shadow">
-                                <h3 class="text-xl font-semibold text-[#4a4a4a] mb-3 line-clamp-2">
-                                    <?= htmlspecialchars($post['title'] ?? 'Untitled Article') ?>
-                                </h3>
-
-                                <div class="text-gray-600 text-[15px] mb-4 leading-relaxed line-clamp-4">
-                                    <?= nl2br(htmlspecialchars(substr($post['message'] ?? '', 0, 220))) ?>...
-                                </div>
-
-                                <div class="flex justify-between items-center text-sm">
-                                    <span class="text-gray-500">
-                                        <?= !empty($post['created_date']) ? date('M j, Y', strtotime($post['created_date'])) : '' ?>
-                                    </span>
-                                    <a href="content-post?id=<?= urlencode($post['id'] ?? '') ?>"
-                                        class="text-[#727b46] hover:underline font-medium">
-                                        Read More →
-                                    </a>
-                                </div>
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="text-xs font-medium uppercase tracking-wider text-[#727b46]">
+                                    Featured
+                                </span>
+                                <span class="text-xs text-gray-400">— Latest story</span>
                             </div>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
+
+                            <h2
+                                class="text-2xl md:text-3xl font-semibold leading-snug group-hover:text-[#727b46] transition">
+                                <?= htmlspecialchars($featured['title']) ?>
+                            </h2>
+
+                            <p class="mt-5 text-gray-600 leading-relaxed text-base md:text-lg">
+                                <?= htmlspecialchars(mb_strimwidth($featured['message'] ?? '', 0, 320, '...')) ?>
+                            </p>
+
+                            <div class="mt-6 text-[#727b46] font-medium group-hover:underline">
+                                Read story →
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </section>
+            <?php endif; ?>
+
+
+            <section>
+
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-sm uppercase tracking-widest text-gray-500">
+                        Recent writing
+                    </h3>
                 </div>
 
-            </div>
+                <?php if (empty($posts) && !$featured): ?>
+                    <div class="text-center py-24 text-gray-500 bg-white/60 rounded-xl">
+                        No posts yet.
+                        <br>
+                        <small class="text-gray-400">(<?= $data['message'] ?? '' ?>)</small>
+                    </div>
+                <?php else: ?>
+
+                    <div class="space-y-8">
+
+                        <?php foreach ($posts as $post): ?>
+
+                            <article class="group">
+
+                                <a href="content-post?id=<?= urlencode($post['id'] ?? '') ?>" class="block">
+
+                                    <div class="flex flex-col gap-2">
+
+                                        <h4
+                                            class="text-xl md:text-2xl font-medium leading-snug group-hover:text-[#727b46] transition">
+                                            <?= htmlspecialchars($post['title'] ?? 'Untitled') ?>
+                                        </h4>
+
+                                        <p class="text-gray-600 leading-relaxed line-clamp-2">
+                                            <?= htmlspecialchars(mb_strimwidth($post['message'] ?? '', 0, 200, '...')) ?>
+                                        </p>
+
+                                        <div class="flex items-center gap-4 text-xs text-gray-400 mt-2">
+
+                                            <span>
+                                                <?= !empty($post['created_date'])
+                                                    ? date('M j, Y', strtotime($post['created_date']))
+                                                    : '—' ?>
+                                            </span>
+
+                                            <span class="text-[#727b46] font-medium group-hover:underline">
+                                                Read →
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        <?php endforeach; ?>
+
+                    </div>
+
+                <?php endif; ?>
+
+            </section>
+
         </section>
 
-        <?php include "./components/page-info.php" ?>
+        <?php include "./components/page-info.php"; ?>
+
     </main>
+
 </body>
 
 </html>
