@@ -2,15 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image to Base64 Converter</title>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <?php include "./components/header.php" ?>
 </head>
 
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+    <?php include "./components/sidebar.php" ?>
 
     <div class="w-full max-w-5xl bg-white shadow-2xl rounded-3xl p-8">
 

@@ -1,16 +1,10 @@
-<div class="fixed bottom-[90px] right-6 z-50">
-    <button
-        id="chatOpenBtn"
-        class="w-14 h-14 rounded-full shadow-lg bg-gradient-to-b from-[#727b46] to-[#88785f]
-               text-white flex items-center justify-center hover:scale-105 transition"
-    >
-         <i class="fa-solid fa-comment-dots text-lg"></i>
+<div class="fixed bottom-[120px] right-6 z-50">
+    <button id="chatOpenBtn" class="w-14 h-14 rounded-full shadow-lg bg-gradient-to-b from-[#727b46] to-[#88785f]
+               text-white flex items-center justify-center hover:scale-105 transition border-solid border-2">
+        <i class="fa-solid fa-comment-dots text-lg"></i>
     </button>
-    <div
-        id="chatBox"
-        class="hidden w-[320px] sm:w-[380px] h-[500px] rounded-2xl shadow-2xl overflow-hidden
-               flex flex-col bg-white border border-[#88785f]/30 mt-3"
-    >
+    <div id="chatBox" class="hidden w-[320px] sm:w-[380px] h-[500px] rounded-2xl shadow-2xl overflow-hidden
+               flex flex-col bg-white border border-[#88785f]/30 mt-3">
         <div class="flex items-center justify-between px-4 py-3
                     bg-gradient-to-b from-[#727b46] to-[#88785f] text-white">
             <span class="font-semibold tracking-wide">
@@ -22,12 +16,8 @@
             </button>
         </div>
         <div class="flex-1 relative bg-[#FAF2DD]">
-            <iframe
-                src="https://tawk.to/chat/69c648bd35e8d61c3a87642f/1jkn8o8vc"
-                class="absolute inset-0 w-full h-full"
-                frameborder="0"
-                allow="none"
-            ></iframe>
+            <iframe src="https://tawk.to/chat/69c648bd35e8d61c3a87642f/1jkn8o8vc" class="absolute inset-0 w-full h-full"
+                frameborder="0" allow="none"></iframe>
         </div>
     </div>
 

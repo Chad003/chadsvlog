@@ -1,162 +1,508 @@
+<?php
+$DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . " years | " . (new DateTime("2022-09-13"))->diff(new DateTime())->m . " months | " . (new DateTime("2022-09-13"))->diff(new DateTime())->d . " days";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php include "./components/header.php" ?>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #88785f;
+            font-weight: 700;
+        }
+
+        .section-heading {
+            font-size: 2.3rem;
+            font-weight: 900;
+            color: #2d2d2d;
+            margin-top: 0.5rem;
+        }
+
+        .skill-chip {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.8rem 1rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ece6dc;
+            transition: 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+        }
+
+        .skill-chip:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.5rem;
+            padding: 1.7rem;
+            transition: 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to bottom right,
+                    rgba(114, 123, 70, 0.08),
+                    transparent);
+            opacity: 0;
+            transition: 0.4s ease;
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .timeline-dot {
+            width: 14px;
+            height: 14px;
+            background: #727b46;
+            border-radius: 999px;
+            position: absolute;
+            left: -8px;
+            top: 8px;
+        }
+
+        .tech-card {
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 30px rgba(0, 0, 0, 0.06);
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-gradient-to-br from-[#f8f6f1] via-[#fcfbf8] to-[#ece7dd]">
+
+    <!-- Background Blur Effects -->
+    <div class="fixed top-0 left-0 w-72 h-72 bg-[#d1bfa3]/20 blur-3xl rounded-full -z-10"></div>
+    <div class="fixed bottom-0 right-0 w-96 h-96 bg-[#727b46]/10 blur-3xl rounded-full -z-10"></div>
+
     <?php include "./components/sidebar.php" ?>
-    <main class="flex-1 p-6 md:ml-[220px] md:mt-0 bg-[#f9f8f5] min-h-screen pt-20 md:pt-10">
-        <div class="bg-white p-6 rounded-xl shadow-md mt-10 border border-[#d1bfa3]/50">
+
+    <main class="flex-1 p-6 md:ml-[220px] min-h-screen pt-24 md:pt-10">
+
+        <div class="max-w-7xl mx-auto space-y-16">
+
+            <!-- HERO -->
             <section
-                class="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-start gap-8 bg-[#f4f1ec] p-3 md:p-10 rounded-2xl shadow-sm border border-[#d1bfa3]/50 mb-8">
-                <img src="./assets/images/chad-profile.webp" alt="Chad's Profile"
-                    class="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover shadow-lg border-4 border-[#d1bfa3]" />
-                <div class="text-center md:text-left">
-                    <h1 class="text-3xl md:text-4xl font-bold text-[#727b46]">Richard Mark Jamilla</h1>
-                    <p class="text-md md:text-lg text-[#88785f] mt-1">
-                        Software Developer
+                class="glass-card rounded-[2rem] p-8 lg:p-14 shadow-[0_10px_40px_rgba(0,0,0,0.07)] relative overflow-hidden">
+
+                <div class="absolute top-0 right-0 w-80 h-80 bg-[#727b46]/5 rounded-full blur-3xl">
+                </div>
+
+                <div class="relative z-10 flex flex-col lg:flex-row items-center gap-10">
+
+                    <!-- IMAGE -->
+                    <div class="relative">
+                        <img src="./assets/images/chad-profile.webp" alt="Richard Mark Jamilla"
+                            class="w-44 h-44 lg:w-56 lg:h-56 rounded-full object-cover border-4 border-white shadow-2xl">
+                    </div>
+
+                    <!-- INFO -->
+                    <div class="flex-1 text-center lg:text-left">
+
+                        <p class="uppercase tracking-[0.35em] text-sm text-[#88785f] font-semibold">
+                            Software Engineer
+                        </p>
+
+                        <h1 class="text-5xl lg:text-7xl font-black text-[#2d2d2d] mt-4 leading-tight tracking-tight">
+                            Richard Mark
+                            <span class="text-[#727b46]">
+                                Jamilla
+                            </span>
+                        </h1>
+
+                        <p class="mt-6 text-lg text-gray-600 leading-relaxed max-w-3xl">
+                            Building scalable systems, modern web
+                            applications, and user-focused digital experiences
+                            using Vue, PHP, JAVA , React, and cloud-ready
+                            architectures.
+                        </p>
+
+                        <!-- CONTACT -->
+                        <div class="flex flex-wrap gap-4 mt-8 justify-center lg:justify-start">
+
+                            <a href="mailto:chadeujamilla@gmail.com"
+                                class="px-6 py-3 rounded-2xl bg-[#727b46] text-white font-semibold hover:scale-105 transition-all duration-300 shadow-lg">
+                                <i class="fa-solid fa-envelope mr-2"></i>
+                                Contact Me
+                            </a>
+
+                            <a href="https://github.com/Chad003" target="_blank"
+                                class="px-6 py-3 rounded-2xl border border-[#d1bfa3] hover:bg-white transition-all duration-300 font-semibold">
+                                <i class="fa-brands fa-github mr-2"></i>
+                                GitHub
+                            </a>
+                        </div>
+
+                        <!-- META -->
+                        <div class="flex flex-wrap gap-6 mt-8 text-gray-600 justify-center lg:justify-start">
+
+                            <span>
+                                <i class="fa-solid fa-location-dot text-[#727b46] mr-2"></i>
+                                Philippines
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-code text-[#727b46] mr-2"></i>
+                                Frontend & Full Stack Developer
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-briefcase text-[#727b46] mr-2"></i>
+                                <?=$DEVELOPER_EXPERINCE?> of Experience
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- EXPERIENCE -->
+            <section>
+
+                <p class="section-title">Experience</p>
+                <h2 class="section-heading">Work History</h2>
+
+                <div class="relative border-l border-[#d8cbb6] ml-4 mt-12 space-y-14">
+
+                    <!-- ITEM -->
+                    <div class="relative pl-10">
+                        <div class="timeline-dot"></div>
+
+                        <p class="text-sm text-gray-500 mb-2">
+                            2023 — Present
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-[#2d2d2d]">
+                            Frontend Developer · Megabet
+                        </h3>
+
+                        <p class="text-gray-600 mt-4 leading-relaxed">
+                            Developing modern responsive applications using Vue
+                            3 while collaborating with backend teams for API
+                            integrations and scalable enterprise solutions.
+                        </p>
+
+                        <ul class="mt-5 space-y-2 text-gray-700">
+                            <li>• Developed responsive enterprise web applications using Vue 3</li>
+                            <li>• Collaborated with backend developers for seamless API integrations</li>
+                            <li>• Implemented modern UI/UX systems improving engagement</li>
+                        </ul>
+                    </div>
+
+                    <!-- ITEM -->
+                    <div class="relative pl-10">
+                        <div class="timeline-dot"></div>
+
+                        <p class="text-sm text-gray-500 mb-2">
+                            2022 — 2023
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-[#2d2d2d]">
+                            Software Developer · Nidec Philippines Corporation
+                        </h3>
+
+                        <p class="text-gray-600 mt-4 leading-relaxed">
+                            Designed and maintained internal systems focused on
+                            workflow automation, reporting optimization, and
+                            enterprise process improvements.
+                        </p>
+
+                        <ul class="mt-5 space-y-2 text-gray-700">
+                            <li>• Reduced manpower costs through workflow automation</li>
+                            <li>• Built internal tools using PHP, JavaScript, and MySQL</li>
+                            <li>• Automated reports and visualization systems</li>
+                            <li>• Enhanced performance of legacy systems</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- SKILLS -->
+            <section>
+
+                <p class="section-title">Tech Stack</p>
+                <h2 class="section-heading">Technologies I Use</h2>
+
+                <div class="flex flex-wrap gap-4 mt-10">
+
+                    <div class="skill-chip">
+                        <i class="fa-brands fa-php text-[#727b46]"></i>
+                        PHP
+                    </div>
+
+                    <div class="skill-chip">
+                        <i class="fa-brands fa-java text-[#727b46]"></i>
+                        Java
+                    </div>
+
+                    <div class="skill-chip">
+                        <i class="fa-brands fa-microsoft text-[#727b46]"></i>
+                        C#
+                    </div>
+
+                    <div class="skill-chip">
+                        <i class="fa-brands fa-python text-[#727b46]"></i>
+                        Python
+                    </div>
+
+                    <div class="skill-chip">
+                        <i class="fa-brands fa-golang text-[#727b46]"></i>
+                        Go
+                    </div>
+
+                    <div class="skill-chip">
+                        <i class="fa-brands fa-vuejs text-[#727b46]"></i>
+                        Vue 3
+                    </div>
+
+                    <div class="skill-chip">
+                        <i class="fa-brands fa-react text-[#727b46]"></i>
+                        Next.js
+                    </div>
+
+                    <div class="skill-chip">
+                        <i class="fa-brands fa-css3 text-[#727b46]"></i>
+                        Tailwind CSS
+                    </div>
+
+                    <div class="skill-chip">
+                        <i class="fa-brands fa-node-js text-[#727b46]"></i>
+                        Node.js
+                    </div>
+
+                    <div class="skill-chip">
+                        <i class="fa-brands fa-gitlab text-[#727b46]"></i>
+                        GitLab CI/CD
+                    </div>
+
+                    <div class="skill-chip">
+                        <i class="fa-solid fa-server text-[#727b46]"></i>
+                        Nginx
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- PROJECTS -->
+            <section>
+
+                <p class="section-title">Projects</p>
+                <h2 class="section-heading">Systems Developed</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+
+                    <!-- CARD -->
+                    <div class="project-card glass-card">
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-2xl font-bold text-[#2d2d2d]">
+                                    WMS
+                                </h3>
+
+                                <i class="fa-solid fa-boxes-stacked text-[#727b46] text-2xl"></i>
+                            </div>
+
+                            <p class="mt-4 text-gray-600 leading-relaxed">
+                                Warehouse inventory and logistics tracking
+                                platform improving operational visibility and
+                                inventory management.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-6">
+                                <span class="px-3 py-1 rounded-full bg-[#f4f1ec] text-sm">
+                                    PHP
+                                </span>
+
+                                <span class="px-3 py-1 rounded-full bg-[#f4f1ec] text-sm">
+                                    MySQL
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="project-card glass-card">
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-2xl font-bold text-[#2d2d2d]">
+                                    DWH
+                                </h3>
+
+                                <i class="fa-solid fa-database text-[#727b46] text-2xl"></i>
+                            </div>
+
+                            <p class="mt-4 text-gray-600 leading-relaxed">
+                                Centralized data warehouse supporting analytics,
+                                reporting, and enterprise business intelligence.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="project-card glass-card">
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-2xl font-bold text-[#2d2d2d]">
+                                    E3Q6S
+                                </h3>
+
+                                <i class="fa-solid fa-clipboard-check text-[#727b46] text-2xl"></i>
+                            </div>
+
+                            <p class="mt-4 text-gray-600 leading-relaxed">
+                                Enhanced quality and safety audit management
+                                system for streamlined compliance monitoring.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="project-card glass-card">
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-2xl font-bold text-[#2d2d2d]">
+                                    OTIS
+                                </h3>
+
+                                <i class="fa-solid fa-bus text-[#727b46] text-2xl"></i>
+                            </div>
+
+                            <p class="mt-4 text-gray-600 leading-relaxed">
+                                Transportation scheduling and logistics platform
+                                for shuttle and route management.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="project-card glass-card">
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-2xl font-bold text-[#2d2d2d]">
+                                    ORBS
+                                </h3>
+
+                                <i class="fa-solid fa-calendar-check text-[#727b46] text-2xl"></i>
+                            </div>
+
+                            <p class="mt-4 text-gray-600 leading-relaxed">
+                                Web-based room and facility reservation system
+                                improving booking efficiency.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="project-card glass-card">
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-2xl font-bold text-[#2d2d2d]">
+                                    FoodJam
+                                </h3>
+
+                                <i class="fa-solid fa-utensils text-[#727b46] text-2xl"></i>
+                            </div>
+
+                            <p class="mt-4 text-gray-600 leading-relaxed">
+                                Restaurant ordering and POS platform supporting
+                                online orders, dine-in workflows, and operations
+                                management.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- EDUCATION -->
+            <section class="glass-card rounded-[2rem] p-10 shadow-lg">
+
+                <p class="section-title">Education</p>
+                <h2 class="section-heading">Academic Background</h2>
+
+                <div class="mt-8">
+
+                    <h3 class="text-2xl font-bold text-[#2d2d2d]">
+                        Bachelor of Science in Information Technology
+                    </h3>
+
+                    <p class="text-[#727b46] font-semibold mt-2">
+                        Mindoro State University
                     </p>
-                    <div class="flex flex-wrap justify-center md:justify-start gap-3 text-sm text-gray-700 mt-4">
-                        <a href="mailto:pepebalintataw@gmail.com" class="hover:text-[#727b46] transition-colors">
-                            <i class="fa-solid fa-envelope"></i> pepebalintataw@gmail.com
-                        </a>
-                        <a href="https://github.com/Chad003" class="hover:text-[#727b46] transition-colors"
-                            target="_blank">
-                            <i class="fa-brands fa-github"></i> github.com/Chad003
-                        </a>
-                        <span><i class="fa-solid fa-location-dot"></i> Philippines</span>
-                    </div>
+
+                    <p class="text-gray-500 mt-2">
+                        Graduated 2022
+                    </p>
+
                 </div>
+
             </section>
 
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-[#727b46] mb-3">Work Experience</h2>
-                <div class="space-y-5">
-                    <div>
-                        <h3 class="font-bold text-[#88785f]">Frontend Developer — Megabet</h3>
-                        <p class="text-sm text-gray-600">2023 – Present</p>
-                        <ul class="list-disc list-inside text-gray-700 mt-2">
-                            <li>Developing responsive web apps using Vue 3 </li>
-                            <li>Collaborating with backend developers for seamless API integrations.</li>
-                            <li>Implementing modern UI/UX principles to optimize user engagement.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-[#88785f]">Software Developer — Nidec Philippines Corporation</h3>
-                        <p class="text-sm text-gray-600">2022 – 2023</p>
-                        <ul class="list-disc list-inside text-gray-700 mt-2">
-                            <li>Reduced manpower and enchanced workflows for the cost reduction of the company.</li>
-                            <li>Designed and maintained internal web tools using PHP, JavaScript, and MySQL.</li>
-                            <li>Automated report generation and improved data visualization workflows.</li>
-                            <li>Enhanced performance of legacy systems with modular code upgrades.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-[#727b46] mb-3">Technical Skills</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-gray-700">
-                    <span class="text-center font-medium">PHP</span>
-                    <span class="text-center font-medium">Java</span>
-                    <span class="text-center font-medium">C#</span>
-                    <span class="text-center font-medium">Python</span>
-                    <span class="text-center font-medium">Go</span>
-                    <span class="text-center font-medium">Vue 3 </span>
-                    <span class="text-center font-medium">React (Next.js)</span>
-                    <span class="text-center font-medium">Tailwind CSS</span>
-                    <span class="text-center font-medium">Node.js</span>
-                    <span class="text-center font-medium">GitLab CI/CD</span>
-                    <span class="text-center font-medium">Nginx Deployment</span>
-                </div>
-            </section>
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-[#727b46] mb-3">Education</h2>
-                <p class="text-gray-700">
-                    <span class="font-bold text-[#88785f]">Bachelor of Science in Information Technology</span><br>
-                    Mindoro State University — Graduated 2022
+            <!-- FOOTER -->
+            <footer class="text-center py-10 text-gray-500">
+
+                <p>
+                    Last updated: May 2026
                 </p>
-            </section>
 
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-[#727b46] mb-5">Projects & Systems Developed</h2>
+                <p class="mt-2 text-[#88785f]">
+                    Designed & Developed by Richard Mark Jamilla
+                </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-[#3d3d2f] leading-relaxed">
-                    <div
-                        class="bg-[#f4f1ec] p-5 rounded-xl shadow-sm border border-[#d1bfa3]/40 hover:shadow-md hover:-translate-y-1 transition-all">
-                        <h3 class="font-semibold text-lg text-[#88785f]">WMS: Warehouse Management System</h3>
-                        <p class="text-sm text-gray-700 mt-1">
-                            A robust inventory and warehouse tracking system designed to improve logistics operations
-                            and visibility.
-                        </p>
-                    </div>
-
-                    <div
-                        class="bg-[#f4f1ec] p-5 rounded-xl shadow-sm border border-[#d1bfa3]/40 hover:shadow-md hover:-translate-y-1 transition-all">
-                        <h3 class="font-semibold text-lg text-[#88785f]">DWH: Data Warehouse</h3>
-                        <p class="text-sm text-gray-700 mt-1">
-                            Centralized data integration platform supporting analytics and business intelligence
-                            reporting.
-                        </p>
-                    </div>
-
-                    <div
-                        class="bg-[#f4f1ec] p-5 rounded-xl shadow-sm border border-[#d1bfa3]/40 hover:shadow-md hover:-translate-y-1 transition-all">
-                        <h3 class="font-semibold text-lg text-[#88785f]">E3Q6S: Enhanced 3Q6S Audit System</h3>
-                        <p class="text-sm text-gray-700 mt-1">
-                            A quality and safety audit web system enabling streamlined process compliance and
-                            performance monitoring.
-                        </p>
-                    </div>
-
-                    <div
-                        class="bg-[#f4f1ec] p-5 rounded-xl shadow-sm border border-[#d1bfa3]/40 hover:shadow-md hover:-translate-y-1 transition-all">
-                        <h3 class="font-semibold text-lg text-[#88785f]">OTIS: Online Transportation Information System
-                        </h3>
-                        <p class="text-sm text-gray-700 mt-1">
-                            A transport scheduling and tracking application for managing shuttle routes and internal
-                            logistics.
-                        </p>
-                    </div>
-
-                    <div
-                        class="bg-[#f4f1ec] p-5 rounded-xl shadow-sm border border-[#d1bfa3]/40 hover:shadow-md hover:-translate-y-1 transition-all">
-                        <h3 class="font-semibold text-lg text-[#88785f]">ORBS: Online Room Booking System</h3>
-                        <p class="text-sm text-gray-700 mt-1">
-                            Web-based booking solution for managing room and facility reservations efficiently.
-                        </p>
-                    </div>
-
-                    <div
-                        class="bg-[#f4f1ec] p-5 rounded-xl shadow-sm border border-[#d1bfa3]/40 hover:shadow-md hover:-translate-y-1 transition-all">
-                        <h3 class="font-semibold text-lg text-[#88785f]">WorkerHunt: Freelancing Portal</h3>
-                        <p class="text-sm text-gray-700 mt-1">
-                            A freelancing platform that connects skilled professionals with clients for project-based
-                            work.
-                        </p>
-                    </div>
-
-                    <div
-                        class="bg-[#f4f1ec] p-5 rounded-xl shadow-sm border border-[#d1bfa3]/40 hover:shadow-md hover:-translate-y-1 transition-all md:col-span-2">
-                        <h3 class="font-semibold text-lg text-[#88785f]">FoodJam: Restaurant Ordering and POS System
-                        </h3>
-                        <p class="text-sm text-gray-700 mt-1">
-                            A complete restaurant ordering and point-of-sales solution with support for online orders
-                            and dine-in management.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <footer class="text-center text-sm text-gray-500 mt-5 border-t border-gray-200 pt-4">
-                <p>Last updated: October 2025</p>
-                <p class="text-[#88785f] mt-1">This online resume is part of ChadsVlog</p>
             </footer>
+
         </div>
 
         <?php include "./components/page-info.php" ?>
+
     </main>
+
 </body>
 
 </html>

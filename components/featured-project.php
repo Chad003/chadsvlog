@@ -2,54 +2,137 @@
 $projects = [
   [
     'title' => 'SHADY: Smart Helmet',
-    'description' => 'A smart helmet with voice recognition and sensor automation for safer, more efficient rides.',
+    'description' => 'A smart helmet with voice recognition, intelligent sensors, and automation features designed to improve rider safety and accessibility.',
     'link' => './project-shady',
-    'button' => 'View Full Project'
+    'button' => 'Explore Project',
+    'icon' => 'fa-helmet-safety'
   ],
   [
     'title' => 'WorkerHunt',
-    'description' => 'WorkerHunt is a platform that connects Filipinos with trusted local workers. WorkerHunt makes it easy to find and hire reliable people nearby—quickly, conveniently, and with confidence.',
+    'description' => 'A modern hiring platform connecting Filipinos with trusted local workers through a streamlined and reliable experience.',
     'link' => './project-workerhunt',
-    'button' => 'View Demo'
+    'button' => 'View Platform',
+    'icon' => 'fa-briefcase'
   ],
 ];
 ?>
-<div class="-mx-6 sm:mx-0">
-  <section class="bg-[#f4f1ec] py-5 px-4 sm:px-8 rounded-xl mt-2">
-    <h2 class="text-2xl font-semibold text-[#727b46] mb-6 text-center">Featured Projects</h2>
-    <div class="flex overflow-x-auto gap-4 sm:hidden no-scrollbar pb-2">
+
+<section class="relative py-16 md:py-24 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#f8f6f1] via-white to-[#f2ede4]"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-14">
+      <div
+        class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#727b46]/10 border border-[#727b46]/10 text-[#727b46] text-xs font-bold tracking-[0.25em] uppercase">
+        <div class="w-2 h-2 rounded-full bg-[#727b46] animate-pulse"></div>
+        Featured Work
+      </div>
+
+      <h2 class="mt-6 text-4xl md:text-6xl font-black tracking-tight text-[#2d2d2d]">
+        Selected
+        <span class="text-[#727b46]">Projects</span>
+      </h2>
+
+      <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-gray-600">
+        A collection of systems, platforms, and products focused on automation, real-world usability, and scalable
+        architecture.
+      </p>
+    </div>
+
+    <div class="flex overflow-x-auto gap-6 pb-4 sm:hidden no-scrollbar">
       <?php foreach ($projects as $project): ?>
-        <div
-          class="flex flex-col justify-between bg-white rounded-xl shadow-md p-5 border border-[#d1bfa3]/40 hover:shadow-lg transition-all duration-300 flex-shrink-0 w-72">
-          <div>
-            <h3 class="text-lg font-semibold text-[#727b46] mb-2"><?= htmlspecialchars($project['title']) ?></h3>
-            <p class="text-sm text-gray-700 mb-6"><?= htmlspecialchars($project['description']) ?></p>
+        <article
+          class="group relative overflow-hidden min-w-[320px] rounded-[2rem] bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition-all duration-500">
+
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-[#727b46]/10 via-transparent to-transparent">
           </div>
-          <div class="mt-auto pt-3">
-            <a href="<?= htmlspecialchars($project['link']) ?>"
-              class="inline-block px-4 py-2 bg-[#727b46] text-white rounded-full hover:bg-[#88785f] transition-all duration-200">
-              <?= htmlspecialchars($project['button']) ?>
-            </a>
+
+          <div class="relative z-10 p-7">
+
+            <div class="w-16 h-16 rounded-2xl bg-[#727b46]/10 flex items-center justify-center">
+              <i class="fa-solid <?= $project['icon'] ?> text-[#727b46] text-2xl"></i>
+            </div>
+
+            <h3 class="mt-6 text-2xl font-black tracking-tight text-[#2d2d2d]">
+              <?= htmlspecialchars($project['title']) ?>
+            </h3>
+
+            <p class="mt-4 text-sm leading-relaxed text-gray-600">
+              <?= htmlspecialchars($project['description']) ?>
+            </p>
+
+            <div class="mt-8">
+              <a href="<?= htmlspecialchars($project['link']) ?>"
+                class="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-[#2d2d2d] hover:bg-black text-white font-semibold transition-all duration-300">
+
+                <?= htmlspecialchars($project['button']) ?>
+
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
           </div>
-        </div>
+        </article>
       <?php endforeach; ?>
     </div>
-    <div class="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="hidden sm:grid sm:grid-cols-2 xl:grid-cols-2 gap-8">
       <?php foreach ($projects as $project): ?>
-        <div
-          class="flex flex-col justify-between bg-white rounded-xl shadow-md p-6 border border-[#d1bfa3]/40 hover:shadow-lg transition-all duration-300">
-          <div>
-            <h3 class="text-lg font-semibold text-[#727b46] mb-2"><?= htmlspecialchars($project['title']) ?></h3>
-            <p class="text-sm text-gray-700 mb-6"><?= htmlspecialchars($project['description']) ?></p>
+        <article
+          class="group relative overflow-hidden rounded-[2.5rem] bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-500">
+
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-[#727b46]/10 via-transparent to-transparent">
           </div>
-          <div class="mt-auto pt-3">
-            <a href="<?= htmlspecialchars($project['link']) ?>"
-              class="inline-block px-4 py-2 bg-[#727b46] text-white rounded-full hover:bg-[#88785f] transition-all duration-200">
-              <?= htmlspecialchars($project['button']) ?>
-            </a>
+
+          <div class="relative z-10 p-10">
+
+            <div class="flex items-start justify-between gap-6">
+
+              <div class="w-20 h-20 rounded-3xl bg-[#727b46]/10 flex items-center justify-center shrink-0">
+                <i class="fa-solid <?= $project['icon'] ?> text-[#727b46] text-3xl"></i>
+              </div>
+
+              <div class="w-3 h-3 rounded-full bg-[#727b46]/30 animate-pulse mt-3"></div>
+
+            </div>
+
+            <h3 class="mt-8 text-4xl font-black tracking-tight leading-tight text-[#2d2d2d]">
+              <?= htmlspecialchars($project['title']) ?>
+            </h3>
+
+            <p class="mt-5 text-base leading-relaxed text-gray-600 max-w-2xl">
+              <?= htmlspecialchars($project['description']) ?>
+            </p>
+
+            <div class="mt-10 flex items-center justify-between">
+
+              <div class="flex items-center gap-2 text-sm font-semibold text-[#727b46]">
+                <div class="w-2 h-2 rounded-full bg-[#727b46]"></div>
+                Case Study Project
+              </div>
+
+              <a href="<?= htmlspecialchars($project['link']) ?>"
+                class="group/button inline-flex items-center gap-3 px-7 py-4 rounded-2xl bg-[#2d2d2d] hover:bg-black text-white font-semibold transition-all duration-300">
+
+                <?= htmlspecialchars($project['button']) ?>
+
+                <div
+                  class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover/button:translate-x-1 transition-all duration-300">
+                  <i class="fa-solid fa-arrow-right text-sm"></i>
+                </div>
+
+              </a>
+
+            </div>
+
           </div>
-        </div>
+
+        </article>
       <?php endforeach; ?>
     </div>
-  </section>
-</div>
+
+  </div>
+</section>

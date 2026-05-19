@@ -8,47 +8,56 @@
 <body>
     <?php include "./components/sidebar.php" ?>
 
-    <main class="flex-1 p-6 md:ml-[220px] md:mt-0 bg-[#f9f8f5] min-h-screen pt-20 md:pt-10">
-        <section class="bg-white p-6 rounded-xl shadow-md mt-10 border border-[#d1bfa3]/50">
-            <h2 class="text-2xl font-semibold mb-4 text-center text-[#727b46]">🧠 Take the ADHD Self-Assessment</h2>
-            <p class="text-center text-gray-700 max-w-2xl mx-auto mb-6">
-                Curious about focus, attention, or impulsivity patterns? Try this short ADHD assessment based on DSM-5
-                criteria.
-                This interactive test will analyze your responses and show a summary at the end.
-            </p>
+    <main class="flex-1 p-6 md:ml-[220px] md:mt-0 bg-[#f9f8f5] min-h-screen md:pt-10 lg:p-10">
 
-            <div class="flex justify-center">
-                <a href="./adhd-test.php"
-                    class="px-6 py-3 bg-[#727b46] hover:bg-[#88785f] text-white font-medium rounded-full transition-all duration-200">
-                    Start the Test →
-                </a>
+        <!-- Portfolio Section -->
+        <section class="w-full py-16 px-4">
+
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-[#727b46]">
+                    My Websites
+                </h1>
+                <p class="text-[#88785f] mt-3 text-lg">
+                    A collection of websites and projects I’ve built.
+                </p>
             </div>
-        </section>
 
-        <section class="bg-white p-6 rounded-xl shadow-md mt-10 border border-[#d1bfa3]/50">
-            <h2 class="text-2xl font-semibold mb-6 text-center text-[#727b46]">My Projects & Websites</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Website Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+                <!-- Card -->
                 <div
-                    class="bg-white rounded-xl shadow-md overflow-hidden border border-[#d1bfa3]/50 hover:shadow-lg transition-shadow duration-300">
-                    <div class="w-full h-60 overflow-hidden">
-                        <iframe src="https://www.agwo.sg/" frameborder="0"
-                            class="w-full h-full object-cover rounded-t-xl" loading="lazy" scrolling="no">
-                        </iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-[#727b46]">AGWO</h3>
-                        <p class="text-sm text-[#3d3d2f] mt-2">
-                            This website is based on singapore, some UI adjustments are made here during my time as
-                            content creator
+                    class="bg-white rounded-2xl shadow-md overflow-hidden border border-[#e7e2d8] hover:shadow-xl transition duration-300">
+
+                    <img src="https://via.placeholder.com/600x350" alt="Website Preview"
+                        class="w-full h-52 object-cover">
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-semibold text-[#727b46] mb-2">
+                            Website Name
+                        </h2>
+
+                        <p class="text-[#6d675d] mb-4">
+                            Short description about the website, what it does, and the technologies used.
                         </p>
-                        <a href="https://www.agwo.sg/"
-                            class="inline-block mt-3 text-sm font-medium text-[#88785f] hover:text-[#727b46] transition-colors duration-200">
-                            🔗 Visit Site
-                        </a>
+
+                        <div class="flex gap-3">
+                            <a href="#"
+                                class="bg-[#727b46] hover:bg-[#5f673a] text-white px-4 py-2 rounded-lg transition">
+                                Live Demo
+                            </a>
+
+                            <a href="#"
+                                class="border border-[#88785f] text-[#88785f] hover:bg-[#88785f] hover:text-white px-4 py-2 rounded-lg transition">
+                                GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
     <?php include "./components/page-info.php" ?>
     </div>
