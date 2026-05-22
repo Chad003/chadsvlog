@@ -4,7 +4,7 @@ $CURRENT_ROUTE = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 <header class="md:hidden fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-xl border-b border-neutral-200">
     <div class="flex items-center justify-between px-5 py-3">
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" onclick="window.location = './'">
             <img src="./assets/images/chadsvlog-logo.webp" alt="Logo" class="w-12 h-auto rounded-2xl shadow-md p-1">
             <div>
                 <h1 class="font-bold text-[#727b46] leading-tight">
@@ -20,7 +20,7 @@ $CURRENT_ROUTE = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 </header>
 
 <nav
-    class="md:top-4 md:h-20 fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[92%] bg-white/70 backdrop-blur-2xl border border-neutral-200 rounded-3xl shadow-2xl px-2 py-2">
+    class="md:w-[35em] md:top-4 md:h-20 fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[92%] bg-white/70 backdrop-blur-2xl border border-neutral-200 rounded-3xl shadow-2xl px-2 py-2">
     <div class="flex items-center justify-around">
         <a href="./" class="flex flex-col items-center justify-center w-16 py-2 rounded-2xl transition-all duration-300
             <?php echo ($CURRENT_ROUTE == '/' || $CURRENT_ROUTE == '')

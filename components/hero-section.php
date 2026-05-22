@@ -78,14 +78,13 @@
                 </p>
             </div>
 
-            <div class="rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 text-center">
+            <div class="rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 text-center ">
                 <h3 class="text-3xl font-black text-yellow-200">
                     SpringBoot
                 </h3>
                 <p class="mt-2 text-sm text-white/70">
                     Backend Expertise
                 </p>
-
             </div>
 
             <div class="rounded-3xl border border-white/10
