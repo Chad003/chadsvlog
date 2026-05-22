@@ -20,7 +20,7 @@ $CURRENT_ROUTE = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 </header>
 
 <nav
-    class="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[92%] bg-white/70 backdrop-blur-2xl border border-neutral-200 rounded-3xl shadow-2xl px-2 py-2">
+    class="md:top-4 md:h-20 fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[92%] bg-white/70 backdrop-blur-2xl border border-neutral-200 rounded-3xl shadow-2xl px-2 py-2">
     <div class="flex items-center justify-around">
         <a href="./" class="flex flex-col items-center justify-center w-16 py-2 rounded-2xl transition-all duration-300
             <?php echo ($CURRENT_ROUTE == '/' || $CURRENT_ROUTE == '')
@@ -29,7 +29,7 @@ $CURRENT_ROUTE = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
             <i class="fa-solid fa-house text-lg"></i>
             <span class="text-[11px] mt-1 font-medium">Home</span>
         </a>
-        
+
         <a href="./videos" class="flex flex-col items-center justify-center w-16 py-2 rounded-2xl transition-all duration-300
             <?php echo (strpos($CURRENT_ROUTE, 'videos') !== false)
                 ? 'bg-[#727b46] text-white shadow-lg'

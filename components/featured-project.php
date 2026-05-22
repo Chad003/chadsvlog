@@ -23,14 +23,8 @@ $projects = [
   <div class="relative z-10 max-w-7xl mx-auto px-6">
 
     <div class="text-center mb-14">
-      <div
-        class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#727b46]/10 border border-[#727b46]/10 text-[#727b46] text-xs font-bold tracking-[0.25em] uppercase">
-        <div class="w-2 h-2 rounded-full bg-[#727b46] animate-pulse"></div>
-        Featured Work
-      </div>
-
       <h2 class="mt-6 text-4xl md:text-6xl font-black tracking-tight text-[#2d2d2d]">
-        Selected
+        Featured
         <span class="text-[#727b46]">Projects</span>
       </h2>
 

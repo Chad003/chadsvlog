@@ -20,9 +20,9 @@ $posts = array_slice($threads, 1);
 
     <?php include "./components/sidebar.php"; ?>
 
-    <main class="flex-1 md:ml-[220px] min-h-screen pt-24 md:pt-12">
+    <main class="flex-1 min-h-screen pt-24 md:pt-12 px-8">
 
-        <section class="max-w-5xl mx-auto px-6">
+        <section class="max-w-5xl mx-auto md:mt-[6.5rem]">
 
             <header class="mb-16 text-center">
                 <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-[#727b46]">

@@ -116,9 +116,9 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
 
     <?php include "./components/sidebar.php" ?>
 
-    <main class="flex-1 p-6 md:ml-[220px] min-h-screen pt-24 md:pt-10">
+    <main class="flex-1 p-6  min-h-screen pt-24 md:pt-10">
 
-        <div class="max-w-7xl mx-auto space-y-16">
+        <div class="max-w-7xl mx-auto space-y-16 md:mt-[5em]">
 
             <!-- HERO -->
             <section
@@ -156,20 +156,26 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
                             architectures.
                         </p>
 
-                        <!-- CONTACT -->
                         <div class="flex flex-wrap gap-4 mt-8 justify-center lg:justify-start">
 
                             <a href="mailto:chadeujamilla@gmail.com"
-                                class="px-6 py-3 rounded-2xl bg-[#727b46] text-white font-semibold hover:scale-105 transition-all duration-300 shadow-lg">
-                                <i class="fa-solid fa-envelope mr-2"></i>
+                                class="px-6 py-3 rounded-xl bg-[#727b46] text-white font-medium shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 flex items-center gap-2">
+                                <i class="fa-solid fa-envelope"></i>
                                 Contact Me
                             </a>
 
                             <a href="https://github.com/Chad003" target="_blank"
-                                class="px-6 py-3 rounded-2xl border border-[#d1bfa3] hover:bg-white transition-all duration-300 font-semibold">
-                                <i class="fa-brands fa-github mr-2"></i>
+                                class="px-6 py-3 rounded-xl bg-white text-gray-900 font-medium border border-gray-200 shadow-md hover:shadow-xl hover:-translate-y-1 hover:bg-gray-100 transition-all duration-300 flex items-center gap-2">
+                                <i class="fa-brands fa-github text-lg"></i>
                                 GitHub
                             </a>
+
+                            <a href="https://www.fiverr.com/s/38Wy7ja" target="_blank"
+                                class="px-6 py-3 rounded-xl border border-[2px] border-[#727b46] text-black font-medium shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 flex items-center gap-2">
+                                <i class="fa-solid fa-briefcase"></i>
+                                Hire Me on Fiver
+                            </a>
+
                         </div>
 
                         <!-- META -->
@@ -187,7 +193,7 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
 
                             <span>
                                 <i class="fa-solid fa-briefcase text-[#727b46] mr-2"></i>
-                                <?=$DEVELOPER_EXPERINCE?> of Experience
+                                <?= $DEVELOPER_EXPERINCE ?> of Experience
                             </span>
 
                         </div>
