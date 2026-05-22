@@ -110,7 +110,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
 
 <body class="bg-gradient-to-br from-[#f8f6f1] via-[#fcfbf8] to-[#ece7dd]">
 
-    <!-- Background Blur Effects -->
     <div class="fixed top-0 left-0 w-72 h-72 bg-[#d1bfa3]/20 blur-3xl rounded-full -z-10"></div>
     <div class="fixed bottom-0 right-0 w-96 h-96 bg-[#727b46]/10 blur-3xl rounded-full -z-10"></div>
 
@@ -120,7 +119,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
 
         <div class="max-w-7xl mx-auto space-y-16 md:mt-[5em]">
 
-            <!-- HERO -->
             <section
                 class="glass-card rounded-[2rem] p-8 lg:p-14 shadow-[0_10px_40px_rgba(0,0,0,0.07)] relative overflow-hidden">
 
@@ -129,13 +127,11 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
 
                 <div class="relative z-10 flex flex-col lg:flex-row items-center gap-10">
 
-                    <!-- IMAGE -->
                     <div class="relative">
                         <img src="./assets/images/chad-profile.webp" alt="Richard Mark Jamilla"
                             class="w-44 h-44 lg:w-56 lg:h-56 rounded-full object-cover border-4 border-white shadow-2xl">
                     </div>
 
-                    <!-- INFO -->
                     <div class="flex-1 text-center lg:text-left">
 
                         <p class="uppercase tracking-[0.35em] text-sm text-[#88785f] font-semibold">
@@ -178,7 +174,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
 
                         </div>
 
-                        <!-- META -->
                         <div class="flex flex-wrap gap-6 mt-8 text-gray-600 justify-center lg:justify-start">
 
                             <span>
@@ -204,7 +199,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
 
             </section>
 
-            <!-- EXPERIENCE -->
             <section>
 
                 <p class="section-title">Experience</p>
@@ -212,7 +206,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
 
                 <div class="relative border-l border-[#d8cbb6] ml-4 mt-12 space-y-14">
 
-                    <!-- ITEM -->
                     <div class="relative pl-10">
                         <div class="timeline-dot"></div>
 
@@ -237,7 +230,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
                         </ul>
                     </div>
 
-                    <!-- ITEM -->
                     <div class="relative pl-10">
                         <div class="timeline-dot"></div>
 
@@ -267,7 +259,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
 
             </section>
 
-            <!-- SKILLS -->
             <section>
 
                 <p class="section-title">Tech Stack</p>
@@ -334,7 +325,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
 
             </section>
 
-            <!-- PROJECTS -->
             <section>
 
                 <p class="section-title">Projects</p>
@@ -342,7 +332,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
 
-                    <!-- CARD -->
                     <div class="project-card glass-card">
                         <div class="relative z-10">
                             <div class="flex items-center justify-between">
@@ -371,7 +360,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
                         </div>
                     </div>
 
-                    <!-- CARD -->
                     <div class="project-card glass-card">
                         <div class="relative z-10">
                             <div class="flex items-center justify-between">
@@ -389,7 +377,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
                         </div>
                     </div>
 
-                    <!-- CARD -->
                     <div class="project-card glass-card">
                         <div class="relative z-10">
                             <div class="flex items-center justify-between">
@@ -407,7 +394,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
                         </div>
                     </div>
 
-                    <!-- CARD -->
                     <div class="project-card glass-card">
                         <div class="relative z-10">
                             <div class="flex items-center justify-between">
@@ -425,7 +411,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
                         </div>
                     </div>
 
-                    <!-- CARD -->
                     <div class="project-card glass-card">
                         <div class="relative z-10">
                             <div class="flex items-center justify-between">
@@ -443,7 +428,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
                         </div>
                     </div>
 
-                    <!-- CARD -->
                     <div class="project-card glass-card">
                         <div class="relative z-10">
                             <div class="flex items-center justify-between">
@@ -466,7 +450,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
 
             </section>
 
-            <!-- EDUCATION -->
             <section class="glass-card rounded-[2rem] p-10 shadow-lg">
 
                 <p class="section-title">Education</p>
@@ -490,7 +473,6 @@ $DEVELOPER_EXPERINCE = (new DateTime("2022-09-13"))->diff(new DateTime())->y . "
 
             </section>
 
-            <!-- FOOTER -->
             <footer class="text-center py-10 text-gray-500">
 
                 <p>

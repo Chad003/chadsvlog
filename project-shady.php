@@ -7,9 +7,8 @@
 
 <body>
     <?php include "./components/sidebar.php" ?>
-    <main class="flex-1 p-6 md:ml-[220px] md:mt-0 bg-[#f9f8f5] min-h-screen pt-20 md:pt-10">
-
-        <section class="bg-white rounded-xl shadow-md border border-[#d1bfa3]/50 mt-4 p-6 md:p-10">
+    <main class="flex-1 p-6 md:mt-0 bg-[#f9f8f5] min-h-screen pt-20 md:pt-10">
+        <section class="bg-white rounded-xl shadow-md border border-[#d1bfa3]/50 mt-4 p-6 md:p-10 md:mt-[5em]">
             <div class="flex flex-col md:flex-row items-center gap-6">
                 <div class="relative w-full md:w-1/2">
                     <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 scroll-smooth no-scrollbar">
