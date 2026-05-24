@@ -48,7 +48,7 @@ $cards = [
 ];
 ?>
 
-<section class="relative py-12 pl-2 md:py-24 overflow-hidden">
+<section class="relative py-1 pl-2 md:py-24 overflow-hidden">
     <!-- MOBILE SCROLL -->
     <div class="sm:hidden overflow-x-auto no-scrollbar pb-2">
 

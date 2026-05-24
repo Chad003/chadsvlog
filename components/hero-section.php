@@ -70,7 +70,7 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-5
             mt-16 w-full max-w-5xl">
             <div class="rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 text-center">
-                <h3 class="text-3xl font-black text-yellow-200">
+                <h3 class="text-2xl font-black text-yellow-200 truncate">
                     Nginx
                 </h3>
                 <p class="mt-2 text-sm text-white/70">
@@ -79,7 +79,7 @@
             </div>
 
             <div class="rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 text-center ">
-                <h3 class="text-3xl font-black text-yellow-200">
+                <h3 class="text-2xl font-black text-yellow-200 truncate">
                     SpringBoot
                 </h3>
                 <p class="mt-2 text-sm text-white/70">
@@ -91,7 +91,7 @@
                 bg-white/10 backdrop-blur-xl
                 p-5 text-center">
 
-                <h3 class="text-3xl font-black text-yellow-200">
+                <h3 class="text-2xl font-black text-yellow-200 truncate">
                     Vue
                 </h3>
 
@@ -104,7 +104,7 @@
             <div class="rounded-3xl border border-white/10
                 bg-white/10 backdrop-blur-xl
                 p-5 text-center">
-                <h3 class="text-3xl font-black text-yellow-200">
+                <h3 class="text-2xl font-black text-yellow-200 truncate">
                     NodeJS
                 </h3>
                 <p class="mt-2 text-sm text-white/70">

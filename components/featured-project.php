@@ -35,7 +35,7 @@ $projects = [
 ];
 ?>
 
-<section class="relative py-16 md:py-24 overflow-hidden">
+<section class="relative pt-16 md:py-24 overflow-hidden">
   <div class="absolute inset-0 bg-gradient-to-br from-[#f8f6f1] via-white to-[#f2ede4]"></div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6">
