@@ -9,6 +9,14 @@ $projects = [
     'project_type' => 'E-Gaming Project'
   ],
   [
+    'title' => 'ZionTech Official Website',
+    'description' => 'Online Customer Inquiry for ZionTech',
+    'link' => 'http://zion-tech.site',
+    'button' => 'View Project',
+    'icon' => 'fa-globe',
+    'project_type' => 'E-Gaming Project'
+  ],
+  [
     'title' => 'Hotel Nikkas OBS',
     'description' => 'Booking system for Hotel Nikkas',
     'link' => './sub-projects/hotel-nikkas.php',
