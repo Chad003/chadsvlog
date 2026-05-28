@@ -26,16 +26,14 @@
 
             I am a
             <span class="text-yellow-200">
-                Software and Website Developer
+                Software and Website 
             </span>
-            experienced in <i>front</i> and <i>backend</i>
-            <span class="text-white/80 pl-3">Development</span>
-
+            Developer
         </h1>
 
         <p class="max-w-3xl mt-8 text-base sm:text-xl
     text-white/80 leading-relaxed">
-            Full Stack Developer experienced in building modern, scalable web
+            A Developer experienced in building modern, scalable web
             applications across frontend and backend technologies. Focused on
             creating clean, efficient, and user-centered solutions that deliver
             real value.

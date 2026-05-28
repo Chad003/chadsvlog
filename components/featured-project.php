@@ -14,7 +14,7 @@ $projects = [
     'link' => 'http://zion-tech.site',
     'button' => 'View Project',
     'icon' => 'fa-globe',
-    'project_type' => 'E-Gaming Project'
+    'project_type' => 'NextJS Project'
   ],
   [
     'title' => 'Hotel Nikkas OBS',
