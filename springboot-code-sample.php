@@ -31,7 +31,7 @@
         }
 
         code {
-            font-size: 14px;
+            font-size: 9px;
         }
 
         .copy-btn {
@@ -59,28 +59,29 @@
     <?php include "./components/sidebar.php" ?>
 
     <main class="flex-1 min-h-screen pt-24 md:pt-12 px-8">
+        <h1 class="text-center text-xl">SpringBoot REST API Code Sample</h1>
         <div class="code-container">
             <button class="copy-btn" onclick="copyCode()">Copy</button>
 
-            <pre><code id="javaCode" class="language-java">
+            <pre>
+                <code id="javaCode" class="language-java">
 package com.api.exam;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-// TODO: Add missing imports
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
-import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 public class ExamApplication {
@@ -97,13 +98,12 @@ public class ExamApplication {
 class StudentController {
 
     // TODO: Inject StudentService
-    @Autowired 
+    @Autowired
     private StudentService studentService;
-    
 
     // TODO: Return all students
     @GetMapping
-    public List<Student> getAllStudents() {
+    public List getAllStudents() {
         return studentService.getAllStudents();
     }
 
@@ -127,31 +127,31 @@ class Student {
     private String name;
     private String email;
 
-    public Student() {}
+    public Student() {
+    }
 
     // TODO: Generate getters and setters
-
-    public int getId(){
+    public int getId() {
         return this.id;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
-    public String getEmail(){
+    public String getEmail() {
         return this.email;
     }
 
-    public void setId(int id){
+    public void setId(int id) {
         this.id = id;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public void setEmail(String email){
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -166,7 +166,7 @@ class StudentService {
     @Qualifier("memoryRepository")
     private StudentRepository repository;
 
-    public List<Student> getAllStudents() {
+    public List getAllStudents() {
         return repository.findAll();
     }
 
@@ -176,7 +176,7 @@ class StudentService {
 
     public Student getStudent(int id) {
         Student student = repository.findById(id);
-        if(student == null){
+        if (student == null) {
             throw new RuntimeException("Student not found");
         }
         return student;
@@ -185,7 +185,7 @@ class StudentService {
 
 interface StudentRepository {
 
-    List<Student> findAll();
+    List findAll();
 
     Student findById(int id);
 
@@ -197,10 +197,10 @@ interface StudentRepository {
 @Repository("memoryRepository")
 class MemoryStudentRepository implements StudentRepository {
 
-    private final List<Student> students = new ArrayList<>();
+    private final List< Student > students = new ArrayList<>();
 
     @Override
-    public List<Student> findAll() {
+    public List findAll() {
         return students;
     }
 
@@ -225,7 +225,7 @@ class MemoryStudentRepository implements StudentRepository {
 class BackupStudentRepository implements StudentRepository {
 
     @Override
-    public List<Student> findAll() {
+    public List findAll() {
         return new ArrayList<>();
     }
 
@@ -239,7 +239,9 @@ class BackupStudentRepository implements StudentRepository {
         return student;
     }
 }
-    </code></pre>
+
+                </code>
+            </pre>
         </div>
     </main>
     <script>
